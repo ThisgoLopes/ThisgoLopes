@@ -23,6 +23,7 @@ int main()
     fflush(stdin);
 
     printf("\nInforme o nome do aluno %d: ", i+1);
+    setbuf(stdin, NULL); 
     fgets(inf_aluno[i].nome, TAMANHO_MAXIMO_DO_NOME, stdin);
 
     printf("Informe a matricula de %s: ", inf_aluno[i].nome);
