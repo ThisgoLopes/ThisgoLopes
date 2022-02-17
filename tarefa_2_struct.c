@@ -28,10 +28,12 @@ int main ()
         printf("Digite o ano: ");
         scanf("%d", &n_data[i].ano);
     }
-/* Falta fazer a forma como ele apresenta os elementos */
-
-    for (i=0; i<n_pessoas; i++){
-
-        printf("Pessoa ")
+    
+     for(i=0;i<=n_pessoas; i++){
+        printf("Nome: %s", dados_pp[i].nome);
+        printf("Matrícula: %d \n", dados_pp[i].cpf);
+        printf("Nascimento: %d/%d/%d \n", dados_pp[i].n_data.dia, dados_pp[i].n_data.mes, dados_pp[i].n_data.ano);
     }
+
+    return 0; // Esta com um erro na hora de apresentar o resultado
 }
