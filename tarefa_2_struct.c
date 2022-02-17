@@ -41,6 +41,7 @@ int main (){
         printf("CPF: %d \n", info[i].cpf);
         printf("Nascimento: %d/%d/%d \n", info[i].nascimento.dia, info[i].nascimento.mes, info[i].nascimento.ano);
     }
-
+      /* Esta dando um erro na hora de mostrar os dados, ela mostra 1 dado a mais do que foi pedido com os campos de informações 
+    sem preencher ou com numeros aleatórios*/
     return 0;
 }
