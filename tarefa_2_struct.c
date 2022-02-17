@@ -1,25 +1,31 @@
 #include <stdio.h>
 
 #define n_pessoas 2
-struct data{
-    int dia;
-    int mes;
-    int ano;
-} n_data[n_pessoas];
+#define max_nome 30
 
-
-struct pessoa{
-    int cpf;
-    n_data; 
-} dados_pp[n_pessoas];
-
-int main ()
-{
+int main (){
     int i;
 
+    typedef struct {
+        int dia;
+        int mes;
+        int ano;
+    } tp_data;
+
+    typedef struct {
+        char nome[max_nome];
+        int cpf;
+        tp_data; 
+    } tp_dados;
+
+    tp_dados info[n_pessoas]
+
     for (i=0; i<n_pessoas; i++){
-        {
-        printf("CPF: ");
+        fflush(stdin);
+        printf("\nInforme o nome: ");
+        setbuf(stdin, NULL);
+        fgets(dados_pp[i].nome, max_nome, stdin);
+        printf("Qual seu CPF: ");
         scanf("%d", &dados_pp[i].cpf);
         printf("Digite o dia: ");
         scanf("%d", &n_data[i].dia);
@@ -29,11 +35,12 @@ int main ()
         scanf("%d", &n_data[i].ano);
     }
     
-     for(i=0;i<=n_pessoas; i++){
-        printf("Nome: %s", dados_pp[i].nome);
-        printf("Matrícula: %d \n", dados_pp[i].cpf);
-        printf("Nascimento: %d/%d/%d \n", dados_pp[i].n_data.dia, dados_pp[i].n_data.mes, dados_pp[i].n_data.ano);
+    for(i=0;i<=n_pessoas; i++){
+        printf("\n-----Informacoes-----\n");
+        printf("Nome: %s", info[i].nome);
+        printf("CPF: %d \n", info[i].cpf);
+        printf("Nascimento: %d/%d/%d \n", info[i].nascimento.dia, info[i].nascimento.mes, info[i].nascimento.ano);
     }
 
-    return 0; // Esta com um erro na hora de apresentar o resultado
+    return 0;
 }
