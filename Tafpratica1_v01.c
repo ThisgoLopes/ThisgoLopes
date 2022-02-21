@@ -19,15 +19,20 @@ int main ()
     y = fm_min - in_min;
     z = fm_sec - in_sec;
 
-    if (x < 1 || y < 1 || z <1 )
+    if (x < 1)
     {
         x = x * -1;
+    }
+    if (y < 1)
+    {
         y = y * -1;
+    }
+    if (z < 1)
+    {
         z = z * -1;
-        printf("A duração da ligação foi: %d:%d:%d", x, y, z);
     }
     
-    printf("A duracao da ligacao foi: %d:%d:%d", x, y, z);
+    printf ("A duracao da chamada foi: %d:%d:%d", x, y, z);
     
     return 0;
 }
