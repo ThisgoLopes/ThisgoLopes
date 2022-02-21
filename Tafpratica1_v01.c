@@ -7,8 +7,6 @@ int main ()
     int fm_hora, fm_min, fm_sec;
     int x, y, z;
 
-    printf("\n**Companhia Telefonica IFES - Piuma!**\n");
-
     printf ("\nQual horario de inicio da ligacao (Hora Minuto Segundo): \n");
     scanf("%d %d %d", &in_hora, &in_min, &in_sec);
 
